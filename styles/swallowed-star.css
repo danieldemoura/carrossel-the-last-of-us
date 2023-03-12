@@ -1,0 +1,39 @@
+.swallowed-star .carousel:after {
+    filter: brightness(1.2);
+    opacity: .83;
+    background-image: linear-gradient(90deg, rgba(0,0,0, 1) 15%, rgba(0,0,0,0.05085784313725494) 35%, rgba(0,0,0,0.05) 65%, rgba(0,0,0,1) 94%);
+}
+
+.swallowed-star .button-play {
+    background-color: #FF0000;
+    box-shadow: 0px 5px 0px #7e0606;
+}
+
+.swallowed-star .button-play:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.swallowed-star .button:hover {
+    background-color: #FF0000;
+}
+
+.swallowed-star .selected {
+    background: #FF0000;
+}
+
+.swallowed-star .toggle {
+    filter: invert(16%) sepia(89%) saturate(7176%) hue-rotate(359deg) brightness(105%) contrast(115%);
+}
+
+.title {
+    font-size: 58px;
+    /* font-family: 'Audiowide', cursive; */
+    font-family: 'Righteous', cursive;
+    /* font-family: 'Russo One', sans-serif; */
+    /* font-family: 'Saira', sans-serif; */
+    line-height: 60px;
+    
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.432);
+    color: #fff;
+}

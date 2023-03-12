@@ -1,0 +1,32 @@
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        box-shadow: inset 0px -120px 70px rgba(0, 0, 0, .9);
+    }
+
+    .content {
+        width: 100%;
+        align-items: center;
+        padding: 5% 5% 0px;
+    }
+
+    .menu-side {
+        padding: 0px;
+    }
+
+    .menu-side ul {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .button-close {
+        right: 0px;
+    }
+
+    iframe {
+        max-width: 100%;
+    }
+}
