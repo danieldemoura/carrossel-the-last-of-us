@@ -132,8 +132,12 @@ main {
     filter: invert(1);
 }
 
-.toggle {
+.toggle, .infinity {
     filter: invert(43%) sepia(9%) saturate(3679%) hue-rotate(91deg) brightness(90%) contrast(85%);
+}
+
+.red {
+    filter: invert(16%) sepia(89%) saturate(7176%) hue-rotate(359deg) brightness(105%) contrast(115%);
 }
 
 .efect-scale:hove {

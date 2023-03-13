@@ -103,10 +103,12 @@ const page = {
     logo: document.querySelector(".logo"),
     paragraph: document.querySelector(".paragraph"),
     buttonToggle: document.querySelector(".toggle"),
+    buttonLoop: document.querySelector(".infinity"),
     iframe: document.querySelector("iframe"),
     h1: document.createElement("h1"),
     indexOfArrayText: 0,
     activedToggle: false,
+    intervalId: null,
 
     toggleDisplayModal(value) {
         this.modal.style.display = value
@@ -197,12 +199,20 @@ const page = {
 
     automaticBackgroundTransition() {
         let index = 0
-        setInterval(() => {
-            this.nextImage(index)
-            console.log(index)
-            index = index === 5 ? 0 : index + 1
+        let actived = this.buttonLoop.classList.toggle("red")
+        
+        if(actived) {
+            
+            this.intervalId = setInterval(() => {
+                index = index === 5 ? 0 : index + 1
+                this.nextImage(index)
 
-        }, 2000);
+            }, 2000)
+
+        } else {
+            clearInterval(this.intervalId)
+        }
+
     },
 
     init() {
@@ -212,7 +222,7 @@ const page = {
             button.addEventListener("click", () => page.nextImage(index))
         })
         page.buttonToggle.addEventListener("click", page.toggleElements.bind(page))
-        page.automaticBackgroundTransition()
+        page.buttonLoop.addEventListener("click", this.automaticBackgroundTransition.bind(page))
     }
 }
 
